@@ -24,7 +24,7 @@ github_username:  NateRickard
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
+theme: jekyll-theme-modernist
 gems:
   - jekyll-feed
 exclude:

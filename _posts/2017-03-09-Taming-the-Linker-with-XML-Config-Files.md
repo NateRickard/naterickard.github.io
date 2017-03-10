@@ -72,7 +72,7 @@ The basic steps I take to figure out the proper names are:
 	{% endhighlight %}
 	
 - Next, you'll need to find out how the method or event name shows up **_in the IL_** once compiled.
-	- This is due to the fact that the linker functions at the IL level and needs to match elements with those names, which can and will differ than how they appear in the C# code.
+	- This is because the linker functions at the IL level and needs to match elements with those names, which can and will differ than how they appear in the C# code.
 - Finding the correct name(s) depends on what kind of member it is:
   -  Constructors: refer to the naming/syntax [listed in the docs here](https://developer.xamarin.com/guides/cross-platform/advanced/custom_linking/).
   -  Properties: these get rendered as methods once compiled to IL, so they will always show up as a combination of two methods: `get_<PropertyName>` and `set_<PropertyName>`.

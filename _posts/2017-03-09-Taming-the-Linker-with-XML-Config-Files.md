@@ -2,7 +2,7 @@
 layout: post
 title: Taming the Linker with XML Config Files
 tags: 	xamarin ios tips storyboard xcode C#
-excerpt: While there are [other ways to control the behavior of the linker](https://developer.xamarin.com/guides/ios/advanced_topics/linker/), some of these can feel hacky and/or too 'broad' (e.g. telling the linker to skip an entire assembly).  Fortunately, there is another option - a custom linker configuration (XML) file that can be used to control the linker to a very fine degree.
+excerpt: While there are other ways to control the behavior of the linker, some of these can feel hacky and/or too 'broad' (e.g. telling the linker to skip an entire assembly).  Fortunately, there is another option - a custom linker configuration (XML) file that can be used to control the linker to a very fine degree.
 ---
 
 I recently worked with a customer who wanted to address the problem of the Xamarin linker removing types, events, and methods.  The linker, which is used to remove unnecessary code to improve app size and overall build times, can sometimes cause issues in user code and also some very popular libraries, [such as MVVM Light](http://blog.galasoft.ch/posts/2015/03/solving-the-event-not-found-issue-in-xamarin-mvvmlight-binding-and-commanding/).

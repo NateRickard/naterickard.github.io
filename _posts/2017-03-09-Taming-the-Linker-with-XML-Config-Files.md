@@ -56,6 +56,9 @@ The basic steps I take to figure out the proper names are:
 - Find out which class actually defines the event/method/field you want to preserve.
 	- One way I've found to locate these easily is to right click the event/method and select "Go to Definition" within the IDE.  Since Xamarin Studio and/or Visual Studio for Mac supports .NET decompilation out of the box, it will take you to the class definition within the assembly where the member is defined.
 		- If not using Xamarin Studio/VS for Mac, you could use a tool like dotPeek or just review the API documentation for the member.
+
+		![IDE screenshot](/assets/images/Screenshot-2017-03-10-13.50.59.png)
+
 	- Once the class & member are found, grab the full namespace + class of that Type.  
 	
 		Examples:

@@ -83,4 +83,4 @@ As shown in the docs, you can also use more advanced pattern and wildcard matchi
 
 ## Wrapping it up
 
-As you can see, it's not too terribly difficult to control the linker via an XML config file.  It's not as fast as some other, more blunt, methods we have available, but for heavily used libraries or repeatable situations, it's likely one of the best fits due to its granularity and potential for reuse.
+As you can see, it's not too difficult to control the linker via an XML config file.  It's not as fast as some other, more blunt, methods we have available; however, for heavily used libraries or repeatable situations, it's likely one of the best fits due to its granularity and potential for reuse.

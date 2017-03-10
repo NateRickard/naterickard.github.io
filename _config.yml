@@ -23,6 +23,7 @@ disclaimer: I work at Microsoft, but opionions are my own.
 copyright:   © Copyright 2016 Nate Rickard
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://naterickard.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+repository: NateRickard/naterickard.github.io
 twitter_username: TheNateRickard
 github_username:  NateRickard
 show_downloads: false

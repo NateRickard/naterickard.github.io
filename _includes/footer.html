@@ -5,7 +5,13 @@
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+
+      <div class="footer-col">
+        <p class="footer-heading">{{ site.description | escape }}</p>
+        <p>{{ site.disclaimer | escape }}</p>
+      </div>
+
+      <div class="footer-col footer-col-2">
         <ul class="contact-list">
           <li>
             {% if site.author %}
@@ -29,11 +35,6 @@
             </li>
             {% endif %}
         </ul>
-      </div>
-
-      <div class="footer-col">
-        <p class="footer-heading">{{ site.description | escape }}</p>
-        <p>{{ site.disclaimer | escape }}</p>
       </div>
       
     </div>

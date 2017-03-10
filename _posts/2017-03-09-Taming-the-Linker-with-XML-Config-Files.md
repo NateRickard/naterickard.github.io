@@ -15,10 +15,10 @@ The Xamarin [documentation](https://developer.xamarin.com/guides/cross-platform/
 
 Using the MVVM Light library example, we might write this code (Xamarin.Android):
 
-{% highlight c# %}
+```c#
 var button = FindViewById<Button> (Resource.Id.myButton);
 button.SetCommand ("Click", ViewModel.MyCommand);
-{% endhighlight %}
+```
 
 
 If the `Click` event is not preserved by direct use (or any other means), when this code executes in a _Release_ build, you would see an exception similar to:
@@ -33,7 +33,7 @@ So, how might we preserve the needed event using a custom linker config file?
 
 Here's an example file that does just that:
 
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <linker>
 	<assembly fullname="Mono.Android">
@@ -43,7 +43,7 @@ Here's an example file that does just that:
 		</type>
 	</assembly>
 </linker>
-{% endhighlight %}
+```
 
 If I paste that XML into an XML file within my Xamarin.Android project and set its build action to `LinkDescription`, we would see that the linker will now leave the `Click` event in place and the exception will not occur.
 
@@ -65,11 +65,11 @@ The basic steps I take to figure out the proper names are:
 
 - At this point you should have all you need for your assembly + type definition:
 
-	{% highlight xml %}
+	```xml
 	<assembly fullname="Mono.Android">
 	        <type fullname="Android.Views.View">
 	...
-	{% endhighlight %}
+	```
 	
 - Next, you'll need to find out how the method or event name shows up **_in the IL_** once compiled.
 	- This is because the linker functions at the IL level and needs to match elements with those names, which can and will differ than how they appear in the C# code.

@@ -77,10 +77,10 @@ The basic steps I take to figure out the proper names are:
 - Next, you'll need to find out how the method or event name shows up **_in the IL_** once compiled.
 	- This is because the linker functions at the IL level and needs to match elements with those names, which can and will differ than how they appear in the C# code.
 - Finding the correct name(s) depends on what kind of member it is:
-  -  Constructors: refer to the naming/syntax [listed in the docs here](https://developer.xamarin.com/guides/cross-platform/advanced/custom_linking/).
-  -  Properties: these get rendered as methods once compiled to IL, so they will always show up as a combination of two methods: `get_<PropertyName>` and `set_<PropertyName>`.
-  -  Events: this took some digging, but it appears that like properties above, they will show up in the IL as `add_<PropertyName>` and `remove_<PropertyName>` methods in the IL.
-  -  Fields: these come through to the IL _as is_, I believe.
+  -  **Constructors**: refer to the naming/syntax [listed in the docs here](https://developer.xamarin.com/guides/cross-platform/advanced/custom_linking/).
+  -  **Properties**: these get rendered as methods once compiled to IL, so they will always show up as a combination of two methods: `get_<PropertyName>` and `set_<PropertyName>`.
+  -  **Events**: this took some digging, but it appears that like properties above, they will show up in the IL as `add_<PropertyName>` and `remove_<PropertyName>` methods in the IL.
+  -  **Fields**: these come through to the IL _as is_, I believe.
 
 As shown in the docs, you can also use more advanced pattern and wildcard matching to find and exclude members from linking as well.
 

@@ -13,21 +13,24 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+# 
 title: Mobile+
 email: 
 author: Nate Rickard
 author_link: "https://github.com/naterickard"
-description: > # this means to ignore newlines until "baseurl:"
-  Ramblings on Xamarin, mobile, and cloud technologies.
+show_downloads: false
+
+description: Ramblings on Xamarin, mobile, and cloud technologies.
 disclaimer: I work at Microsoft, but opionions are my own.
-copyright:   © Copyright 2016 Nate Rickard
+copyright: © Copyright 2016 Nate Rickard
+
+repository: NateRickard/naterickard.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://naterickard.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-repository: NateRickard/naterickard.github.io
+
+# Social Accounts
 twitter_username: TheNateRickard
 github_username:  NateRickard
-show_downloads: false
-google_analytics: UA-92199836-1
 
 # Build settings
 markdown: kramdown
@@ -37,3 +40,6 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# Google services
+google_analytics: UA-92199836-1
